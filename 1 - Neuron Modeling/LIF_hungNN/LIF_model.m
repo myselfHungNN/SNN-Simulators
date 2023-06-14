@@ -50,9 +50,7 @@ function Vn1 = RK2nd(Vn, dt, I1, I2, type)
             Vn_1 = zeros(size(Vn)); %Intermediate value, used to calculate k2   
             Vn_1 = Vn + (f(Vn,I1))*dt; %Get intermediate value using k1
             Vn1 =Vn + (((f(Vn_1,I2))+(f(Vn,I1)))/2)*dt; %V(n+1) from k1 and k2
-            break
         otherwise
-            break
     end
 end
 %% The 'f' from the differential equation x' = f(x,t)
